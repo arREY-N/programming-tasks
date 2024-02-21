@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class LabExer1B {
     public static void main(String[] args) {
-        
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter an integer: ");
@@ -19,16 +18,16 @@ public class LabExer1B {
     }
 
     // showNumberPlus10 is a method which have an integer named userNumber as its parameter
-    static void showNumberPlus10(int userNumber){   
+    public static void showNumberPlus10(int userNumber){   
         //uses the printf method to format and display the statement
         System.out.printf("%d plus 10 is %d.%n", userNumber, (userNumber+10));
     }
 
-    static void showNumberPlus100(int userNumber){
+    public static void showNumberPlus100(int userNumber){
         System.out.printf("%d plus 100 is %d.%n", userNumber, (userNumber+100));
     }
 
-    static void showNumberPlus1000(int userNumber){
+    public static void showNumberPlus1000(int userNumber){
         System.out.printf("%d plus 1000 is %d.%n", userNumber, (userNumber+1000));
     }
 }
