@@ -9,7 +9,7 @@ public class LabExer1B {
         System.out.print("Enter an integer: ");
         int userNumber = scan.nextInt();
         
-        //calls the method showNumberPlus10 with userNumber as its argument
+        // Calls the method showNumberPlus10 with userNumber as its argument
         showNumberPlus10(userNumber);       
         showNumberPlus100(userNumber);              
         showNumberPlus1000(userNumber);     
@@ -17,9 +17,13 @@ public class LabExer1B {
         scan.close();
     }
 
-    // showNumberPlus10 is a method which have an integer named userNumber as its parameter
+    /*  
+    *   showNumberPlus10 is a method which has an integer named userNumber as 
+    *   its parameter
+    */
+
     public static void showNumberPlus10(int userNumber){   
-        //uses the printf method to format and display the statement
+        // Uses the printf method to format and display the statement
         System.out.printf("%d plus 10 is %d.%n", userNumber, (userNumber+10));
     }
 
