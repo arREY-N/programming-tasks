@@ -14,10 +14,12 @@ public class RunEmployee {
 
         switch (response) {
             case "F":
-                fullTime(employeeName);
+                // calls and sends the employyeName to the fullTime method in this class 
+                fullTime(employeeName); 
                 break;
             case "P":
-                partTime(employeeName);
+                // calls and sends the employeeName to the partTime method in this class
+                partTime(employeeName);  
                 break;
             default:
                 System.out.println("Invalid input. Restart program");
@@ -26,6 +28,7 @@ public class RunEmployee {
         scan.close();
     }
 
+    // Handles the creation of a new FullTimeEmployee object
     private static void fullTime(String employeeName){
         Scanner fullTimeScanner = new Scanner(System.in);
 
@@ -40,6 +43,7 @@ public class RunEmployee {
         fullTimeScanner.close();
     }
 
+    // Handles the creation of a new PartTimeEmployee object
     private static void partTime(String employeeName){
         Scanner partTimeScanner = new Scanner(System.in);
         

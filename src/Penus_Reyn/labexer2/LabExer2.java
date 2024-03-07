@@ -1,4 +1,4 @@
-package Penus_Reyn;
+package Penus_Reyn.labexer2;
 
 import java.util.*;
 
@@ -8,8 +8,6 @@ public class LabExer2 {
     static private int itemQuantity;
     static private double amountDue;
 
-    static Scanner s = new Scanner(System.in);
-
     public static void main(String[] args) { 
         readInput();
         writeOutput();
@@ -17,11 +15,15 @@ public class LabExer2 {
     }
 
     public static void readInput(){
+        Scanner s = new Scanner(System.in);
+
         System.out.println("Enter the name of the item you are purchasing");
         setItemName(s.nextLine());
         System.out.println("Enter the quantity and price separated by a space");
         setTotalCost(s.nextInt(), s.nextDouble());
         s.nextLine();
+
+        s.close();
     }
 
     public static void writeOutput(){

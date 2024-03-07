@@ -5,6 +5,11 @@ public class PartTimeEmployee extends Employee{
     private int hoursWorked;
     private double wage;
 
+    /*  
+        using the Employee constructor for part-time employees in the Employee class 
+        as a way to initialize the PartTimeEmployee constructor in this file
+    */
+
     PartTimeEmployee(String name, double ratePerHour, int hoursWorked) {
         super(name, ratePerHour, hoursWorked);
         setWage(ratePerHour, hoursWorked);
@@ -13,13 +18,14 @@ public class PartTimeEmployee extends Employee{
     public void setWage(double ratePerHour, int hoursWorked){
         this.ratePerHour = ratePerHour;
         this.hoursWorked = hoursWorked;
+        this.wage = this.ratePerHour * this.hoursWorked;
     }
 
     public double getWage(){
-        wage = ratePerHour * hoursWorked;
         return wage;
     }
 
+    // overrides the writeOutput method in the superclass (Employee.java)
     @Override
     public void writeOutput() {
         super.writeOutput();

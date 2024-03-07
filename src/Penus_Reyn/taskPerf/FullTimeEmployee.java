@@ -3,10 +3,13 @@ package Penus_Reyn.taskPerf;
 public class FullTimeEmployee extends Employee{
 
     private double monthlySalary;
-
-    FullTimeEmployee(String name, double salary) {
-        super(name, salary);
-        setMonthlySalary(salary);
+    /*  
+        using the Employee constructor for full-time employees in the Employee class 
+        as a way to initialize the FullTimeEmployee constructor in this file
+    */
+    FullTimeEmployee(String name, double monthlySalary) {
+        super(name, monthlySalary);
+        this.monthlySalary = monthlySalary;
     }
 
     public void setMonthlySalary(double monthlySalary){
@@ -17,6 +20,7 @@ public class FullTimeEmployee extends Employee{
         return monthlySalary;
     }
 
+    // overrides the writeOutput method in the superclass (Employee.java)
     @Override
     public void writeOutput() {
         super.writeOutput();
