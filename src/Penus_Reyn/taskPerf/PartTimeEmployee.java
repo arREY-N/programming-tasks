@@ -4,12 +4,10 @@ public class PartTimeEmployee extends Employee{
     private double ratePerHour;
     private int hoursWorked;
     private double wage;
-
     /*  
         using the Employee constructor for part-time employees in the Employee class 
         as a way to initialize the PartTimeEmployee constructor in this file
     */
-
     PartTimeEmployee(String name, double ratePerHour, int hoursWorked) {
         super(name, ratePerHour, hoursWorked);
         setWage(ratePerHour, hoursWorked);

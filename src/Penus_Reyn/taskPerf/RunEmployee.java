@@ -12,7 +12,7 @@ public class RunEmployee{
         System.out.println("Enter name: ");
         String employeeName = scan.nextLine();
     
-        System.out.println("Pree F for Full Time or P for Part Time");
+        System.out.println("Press F for Full Time or P for Part Time");
         char response = scan.nextLine().toUpperCase().charAt(0);
     
         switch (response){
