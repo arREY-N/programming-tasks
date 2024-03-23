@@ -19,36 +19,30 @@ public class LabExer5B {
 
             try{
                 System.out.print("Answer: ");
-                String response = scan.nextLine().toUpperCase();
+                char response = scan.nextLine().toUpperCase().charAt(0);
                 
-                if(response.isBlank()){
+                if(Character.isWhitespace(response)){
                     i--;
                     throw new BlankInputException();
-                } else if(!response.matches("[a-zA-Z]+")){
-                    i--;
-                    throw new InputMismatchException();
                 }else{
                     switch (response) {
-                        case "A":
+                        case 'A':
                             score += checkAnswer(i, 1);
                             break;
-                        case "B":
+                        case 'B':
                             score += checkAnswer(i, 2);
                             break;
-                        case "C":
+                        case 'C':
                             score += checkAnswer(i, 3);
                             break;
                         default:
                             i--;
-                            throw new InvalidOptionException();
+                            throw new InputMismatchException();
                     }
                 }
             }
-            catch(InvalidOptionException ioe){
-                System.out.println(ioe.getMessage());
-            }
             catch(InputMismatchException ime){
-                System.out.println("\nERROR: [Input cannot be a non-alphabet character]\n");
+                System.out.println("\nINPUT_ERROR: [Invalid input. Try again!]\n");
             } 
             catch(BlankInputException bie){
                 System.out.println(bie.getMessage());
@@ -60,15 +54,9 @@ public class LabExer5B {
         scan.close();
     }
 
-    static class InvalidOptionException extends Exception{
-        InvalidOptionException(){
-            super("\nERROR: [Input is not in the choices]\n");
-        }
-    }
-
     static class BlankInputException extends Exception{
         BlankInputException(){
-            super("\nERROR: [Input cannot be blank]\n");
+            super("\nBLANK_ERROR: [Invalid input. Try again!]\n");
         }
     }
     
