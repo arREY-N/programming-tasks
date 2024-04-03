@@ -1,7 +1,14 @@
-import java.nio.file.*;
-import java.util.*;
+import java.nio.file.DirectoryNotEmptyException;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 import static java.nio.file.AccessMode.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class LabExer6A {
     public static void main(String[] args) {
