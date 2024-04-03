@@ -16,7 +16,7 @@ public class LabExer5A {
         while(userGuess!=RANDOM){
             try{
                 attempts++;
-                userGuess = Integer.parseInt(scan.next());
+                userGuess = scan.nextInt();
 
                 if(userGuess>50 || userGuess<1){
                     throw new OutOfRangeException();
@@ -27,13 +27,13 @@ public class LabExer5A {
                 } else{
                     System.out.printf("You got it in %d attempt(s)!", attempts);
                 }
-
-            } 
+            }
             catch (OutOfRangeException oore){
                 System.out.println(oore.getMessage());
                 System.out.println("Guess a number from 1 to 50!");
             } 
             catch (NumberFormatException | InputMismatchException ime){
+                scan.next();
                 System.out.println("Invalid input");
                 System.out.println("Guess a number from 1 to 50!");
             } 

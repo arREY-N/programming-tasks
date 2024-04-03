@@ -1,8 +1,6 @@
 package Penus_Reyn.labexer5b;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 public class LabExer5B {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -53,12 +51,6 @@ public class LabExer5B {
         }
         scan.close();
     }
-
-    static class BlankInputException extends Exception{
-        BlankInputException(){
-            super("\nBLANK_ERROR: [Invalid input. Try again!]\n");
-        }
-    }
     
     static int checkAnswer(int question, int answer){
         int[] answerKey = {3, 2, 2, 2, 1, 2, 3, 3, 2, 1};
@@ -79,63 +71,59 @@ public class LabExer5B {
                 "A: Venus",
                 "B: Mercury",
                 "C: Mars"
-            },
-            {
+            },{
                 "2. How many planets are there in our Solar System?",
                 "A: 9",
                 "B: 8",
                 "C: 7"
-            },
-            {
+            },{
                 "3. Which planet had the most number of moons?",
                 "A: Uranus",
                 "B: Jupiter",
                 "C: Saturn"
-            },
-            {
+            },{
                 "4. What happens when the Moon is in between the Sun and Earth?",
                 "A: Solar Flare",
                 "B: Solar Eclipse",
                 "C: Lunar Eclipse"
-            },
-            {
+            },{
                 "5. What is the hottest planet in the Solar System?",
                 "A: Venus",
                 "B: Mercury",
                 "C: Earth"
-            },
-            {
+            },{
                 "6. Where is the Great Red Spot located?",
                 "A: Mars",
                 "B: Jupiter",
                 "C: Venus"
-            },
-            {
+            },{
                 "7. Where is the tallest volcano in the Solar System located?",
                 "A: Earth",
                 "B: Saturn",
                 "C: Mars"
-            },
-            {
+            },{
                 "8. In the movie Interstellar, where was the wormhole located?",
                 "A: Near Jupiter",
                 "B: Near Neptune",
                 "C: Near Saturn"                
-            },
-            {
+            },{
                 "9. What is the term used when matter are stretched by a blackhole?",
                 "A: Pastafication",
                 "B: Spaghettification",
                 "C: Noodlefied"
-            },
-            {
+            },{
                 "10. What is the process used by the Sun to generate heat and light?",
                 "A: Nuclear Fussion",
                 "B: Nuclear Fission",
                 "C: Nuclear Combustion"
             }
         };
-
         return questions[questionNumber];
     }
 }
+
+class BlankInputException extends Exception{
+    BlankInputException(){
+        super("\nBLANK_ERROR: [Invalid input. Try again!]\n");
+    }
+} 

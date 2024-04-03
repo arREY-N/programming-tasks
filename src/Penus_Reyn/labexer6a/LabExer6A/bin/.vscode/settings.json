@@ -1,8 +1,7 @@
 {
     "java.project.sourcePaths": [
         "src",
-        ".",
-        "Labexer6a"
+        "."
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
